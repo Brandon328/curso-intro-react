@@ -1,25 +1,7 @@
 // import './App.css';
 import React from 'react';
-import { TodoCounter } from './components/TodoCounter';
-import { TodoSearch } from './components/TodoSearch';
-import { TodoList } from './components/TodoList';
-import { CreateTodoButton } from './components/CreateTodoButton';
-import { TodoItem } from './components/TodoItem';
-
-const todos = [
-  {
-    text: 'Cortar Cebolla',
-    completed: false
-  },
-  {
-    text: 'Tomar el curso de intro a React',
-    completed: false
-  },
-  {
-    text: 'Llorar con la llorona',
-    completed: false
-  },
-]
+import { TodoHeader } from './components/js/TodoHeader';
+import { TodoMain } from './components/js/TodoMain/TodoMain';
 
 // Componente
 function App() {
@@ -27,16 +9,8 @@ function App() {
   return (
     // React.Fragment es una etiqueta invisible para evitar los div's innecesarios
     <React.Fragment>
-      <TodoCounter />
-      <TodoSearch />
-      <TodoList>
-        {
-          todos.map((todo, index) => (
-            <TodoItem key={index} text={todo.text} />
-          ))
-        }
-      </TodoList>
-      <CreateTodoButton />
+      <TodoHeader />
+      <TodoMain />
     </React.Fragment>
   );
 }
