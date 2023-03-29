@@ -14,6 +14,30 @@ const todos = [
     text: 'Llorar con la llorona',
     completed: false
   },
+  {
+    text: 'Cortar Cebolla',
+    completed: true
+  },
+  {
+    text: 'Tomar el curso de intro a React',
+    completed: false
+  },
+  {
+    text: 'Llorar con la llorona',
+    completed: false
+  },
+  {
+    text: 'Cortar Cebolla',
+    completed: true
+  },
+  {
+    text: 'Tomar el curso de intro a React',
+    completed: false
+  },
+  {
+    text: 'Llorar con la llorona',
+    completed: false
+  },
 ]
 
 function TodoList() {

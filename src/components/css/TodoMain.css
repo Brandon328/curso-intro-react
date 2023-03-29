@@ -7,6 +7,44 @@ main{
   margin: 0 auto;
 }
 
+/* TO DO INPUT */
+.todo-input-container::before{
+  content: '';
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(1, 1, 1, .63);
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+}
+.todo-input{
+  position: fixed;
+  width: 100vw;
+  max-width: 700px;
+  padding: var(--mobile-padding);
+  border-radius: 4px;
+  background-color: var(--dark-bg);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+.todo-input input{
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 4px;
+  margin-right: 12px;
+  color: var(--light-text-color);
+}
+.todo-input button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 /* MAIN HEADER */
 .todo-main__header{
   display: flex;
@@ -24,6 +62,16 @@ main{
   list-style: none;
   margin: 0;
   padding: 0;
+  height: 75%;
+  overflow-y: scroll;
+  padding-bottom: 60px;
+}
+.todo-main__todo-list::-webkit-scrollbar {
+  background-color: transparent;
+}
+.todo-main__todo-list::-webkit-scrollbar-thumb{
+  background-color: var(--border-button-color);
+  border-radius: 8px;
 }
 .todo-main__todo-list li{
   display: flex;
@@ -34,7 +82,7 @@ main{
 .todo-item__icon{
   width: 25px;
   height: 25px;
-  background-color: var(--dark-todo-item-color);
+  background-color: var(--dark-todo-icon-color);
   border-radius: 50%;
   margin-right: 12px;
   cursor: pointer;
@@ -42,10 +90,14 @@ main{
 .todo-item__icon--completed img{
   width: 100%;
 }
+.todo-item__icon--completed + span{
+  text-decoration:line-through;
+  color: var(--light-disabled-color);
+}
 
 /* ADD TODO BUTTON */
 .addtodo-btn{
-  position: absolute;
+  position: fixed;
   bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
@@ -58,4 +110,24 @@ main{
   color: white;
   box-shadow: 0px 0px 50px -18px rgba(0,0,0,0.75);
   cursor: pointer;
+}
+
+@media (min-width: 1300px) {
+  .todo-main__todo-list{
+    height: 88%;
+  }
+  .addtodo-btn{
+    display: none;
+  }
+  main .todo-input-container{
+    display: block;
+    position: absolute;
+    top: -80px;
+  }
+  .todo-input-container::before{
+    content: none;
+  }
+  .todo-input{
+    position: relative;
+  }
 }

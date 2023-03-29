@@ -3,7 +3,7 @@
   --mobile-padding: 20px;
   --dark-bg: #444444;
   --light-disabled-color: #C0C0C0;
-  --dark-todo-item-color: #383838;
+  --dark-todo-icon-color: #383838;
   --button-color: #689BD1;
   --border-button-color: #25689C;
 }
@@ -26,4 +26,8 @@ body {
   background-color: rgba(163, 163, 163, 28%);
   width: 100vw;
   height: 100vh;
+}
+
+.inactive{
+  display: none;
 }
