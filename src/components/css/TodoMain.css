@@ -1,0 +1,61 @@
+main{
+  position: relative;
+  background-color: var(--dark-bg);
+  height: 74%;
+  border-radius: 8px 8px 0 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* MAIN HEADER */
+.todo-main__header{
+  display: flex;
+  justify-content: space-between;
+  padding: var(--mobile-padding);
+  border-bottom: 1px solid var(--light-disabled-color);
+}
+.todo-main__header a{
+  text-decoration: none;
+  color: var(--light-disabled-color);
+}
+
+/* TO DO LIST */
+.todo-main__todo-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.todo-main__todo-list li{
+  display: flex;
+  align-items: center;
+  padding: var(--mobile-padding);
+  border-bottom: .5px solid var(--light-disabled-color);
+}
+.todo-item__icon{
+  width: 25px;
+  height: 25px;
+  background-color: var(--dark-todo-item-color);
+  border-radius: 50%;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.todo-item__icon--completed img{
+  width: 100%;
+}
+
+/* ADD TODO BUTTON */
+.addtodo-btn{
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 50px;
+  font-size: 24px;
+  border-radius: 50%;
+  border: 3px solid var(--border-button-color);
+  background-color: var(--button-color);
+  color: white;
+  box-shadow: 0px 0px 50px -18px rgba(0,0,0,0.75);
+  cursor: pointer;
+}

@@ -1,8 +1,29 @@
+:root{
+  --light-text-color: white;
+  --mobile-padding: 20px;
+  --dark-bg: #444444;
+  --light-disabled-color: #C0C0C0;
+  --dark-todo-item-color: #383838;
+  --button-color: #689BD1;
+  --border-button-color: #25689C;
+}
+
 html{
   font-size: 16px;
+  color: var(--light-text-color);
 }
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
+  background-image: url('./img/morging-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#root{
+  background-color: rgba(163, 163, 163, 28%);
+  width: 100vw;
+  height: 100vh;
 }

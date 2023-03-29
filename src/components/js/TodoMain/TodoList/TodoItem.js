@@ -6,8 +6,8 @@ function TodoItem(props) {
     <li>
       {
         props.completed
-          ? <div><img src={completedIcon} alt="completed icon" /></div>
-          : <div></div>
+          ? <div className='todo-item__icon todo-item__icon--completed'><img src={completedIcon} alt="completed icon" /></div>
+          : <div className='todo-item__icon todo-item__icon--todo'></div>
       }
       <span>{props.text}</span>
     </li>

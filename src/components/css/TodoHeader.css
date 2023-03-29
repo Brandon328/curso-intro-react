@@ -1,0 +1,17 @@
+header{
+  min-height: 26%;
+  padding: var(--mobile-padding);
+}
+header h3{
+  font-weight: 500;
+}
+
+header span{
+  font-weight: 300;
+}
+
+@media (min-width: 1200px) {
+  header{
+    padding: 50px 100px;
+  }
+}

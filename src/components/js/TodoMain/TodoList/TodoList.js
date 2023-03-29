@@ -18,7 +18,7 @@ const todos = [
 
 function TodoList() {
   return (
-    <ul>
+    <ul className='todo-main__todo-list'>
       {
         todos.map((todo, index) =>
           <TodoItem key={index} text={todo.text} completed={todo.completed} />
