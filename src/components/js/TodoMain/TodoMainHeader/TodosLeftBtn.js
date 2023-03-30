@@ -1,8 +1,8 @@
 import React from 'react';
 
-function TodosLeftBtn() {
+function TodosLeftBtn({ completed, pending }) {
   return (
-    <a href="/">5 todos left</a>
+    <span>{pending} todos left {completed > 0 && '/ ' + completed + ' completed'}</span>
   )
 }
 

@@ -1,8 +1,8 @@
 import React from 'react';
 
-function ClearCompletedBtn() {
+function ClearCompletedBtn({ clearCompleted }) {
   return (
-    <a href="/">Clear completed</a>
+    <button type="button" onClick={clearCompleted}>Clear completed</button>
   )
 }
 
