@@ -1,7 +1,7 @@
 // import './App.css';
 import React from 'react';
-import { TodoHeader } from './components/js/TodoHeader';
-import { TodoMain } from './components/js/TodoMain/TodoMain';
+import { TodoHeader } from '../TodoHeader';
+import { TodoMain } from '../TodoMain';
 
 // Componente
 function App() {

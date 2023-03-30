@@ -31,3 +31,23 @@ body {
 .inactive{
   display: none;
 }
+
+@media (min-width: 1300px) {
+  .todo-main__todo-list{
+    height: 88%;
+  }
+  .addtodo-btn{
+    display: none;
+  }
+  main .todo-input-container{
+    display: block;
+    position: absolute;
+    top: -80px;
+  }
+  .todo-input-container::before{
+    content: none;
+  }
+  .todo-input{
+    position: relative;
+  }
+}

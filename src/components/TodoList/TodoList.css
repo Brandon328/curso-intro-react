@@ -1,0 +1,16 @@
+/* TO DO LIST */
+.todo-main__todo-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 75%;
+  overflow-y: scroll;
+  padding-bottom: 60px;
+}
+.todo-main__todo-list::-webkit-scrollbar {
+  background-color: transparent;
+}
+.todo-main__todo-list::-webkit-scrollbar-thumb{
+  background-color: var(--border-button-color);
+  border-radius: 8px;
+}

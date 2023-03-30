@@ -1,12 +1,12 @@
 import React from 'react';
-import { TodoMainHeader } from './TodoMainHeader/TodoMainHeader';
-import { TodoList } from './TodoList/TodoList';
-import { TodoItem } from './TodoList/TodoItem';
-import { AddTodoBtn } from './AddTodoBtn';
-import { TodoInput } from './TodoInput';
-import { TodosLeftBtn } from './TodoMainHeader/TodosLeftBtn';
-import { ClearCompletedBtn } from './TodoMainHeader/ClearCompletedBtn';
-import '../../css/TodoMain.css';
+import { TodoMainHeader } from '../TodoMainHeader';
+import { TodoList } from '../TodoList';
+import { TodoItem } from '../TodoItem';
+import { AddTodoBtn } from '../AddTodoBtn';
+import { TodoInput } from '../TodoInput';
+import { TodosLeftBtn } from '../TodoLeftBtn';
+import { ClearCompletedBtn } from '../ClearCompletedBtn';
+import './TodoMain.css';
 
 const defaultTodos = [
   {

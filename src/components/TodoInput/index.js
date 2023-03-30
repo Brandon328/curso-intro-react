@@ -1,5 +1,6 @@
 import React from 'react';
-import sendIcon from '../../../img/send-icon.svg';
+import './TodoInput.css';
+import sendIcon from '../../img/send-icon.svg';
 
 function TodoInput() {
   return (

@@ -1,6 +1,7 @@
 import React from 'react';
-import completedIcon from '../../../../img/completed-icon.svg';
-import trashIcon from '../../../../img/trash-icon.svg';
+import './TodoItem.css';
+import completedIcon from '../../img/completed-icon.svg';
+import trashIcon from '../../img/trash-icon.svg';
 
 function TodoItem(props) {
 
