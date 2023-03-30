@@ -8,46 +8,63 @@ import { TodosLeftSpan } from '../TodoLeftSpan';
 import { ClearCompletedBtn } from '../ClearCompletedBtn';
 import './TodoMain.css';
 
-const defaultTodos = [
-  {
-    text: 'Cortar Cebolla',
-    completed: true
-  },
-  {
-    text: 'Tomar el curso de intro a React',
-    completed: true
-  },
-  {
-    text: 'Llorar con la llorona',
-    completed: false
-  },
-  {
-    text: 'Cortar Cebolla',
-    completed: true
-  },
-  {
-    text: 'Tomar el curso de intro a React',
-    completed: false
-  },
-  {
-    text: 'Llorar con la llorona',
-    completed: false
-  },
-  {
-    text: 'Cortar Cebolla',
-    completed: true
-  },
-  {
-    text: 'Tomar el curso de intro a React',
-    completed: false
-  },
-  {
-    text: 'Llorar con la llorona',
-    completed: false
-  },
-]
+// Custom hook. Debemos usar la palabra 'use' al inicio del custom hook
+function useLocalStorage(itemName, initialValue) {
+  const [item, setItem] = React.useState(initialValue);
+  const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState(false);
+
+  // React ejecuta el useEffect luego del render de React, pero antes del render en el navegador.
+  // En cambio, React ejecuta el useLayoutEffect luego del render de React y del render en el navegador.
+  React.useEffect(() => {
+    setTimeout(() => {
+      try {
+        let parsedItem;
+        setItem(() => {
+          const localStorageItem = localStorage.getItem(itemName);
+          if (localStorageItem) {
+            parsedItem = JSON.parse(localStorageItem);
+          }
+          else {
+            parsedItem = initialValue;
+            localStorage.setItem(itemName, JSON.stringify(parsedItem));
+          }
+        }, 1500);
+        setItem(parsedItem);
+        setLoading(false);
+      }
+      catch (err) {
+        setError(err);
+      }
+    }, 1500)
+  }, []);
+
+  function saveItem(newItem) {
+    try {
+      const stringifiedItem = JSON.stringify(newItem);
+      localStorage.setItem(itemName, stringifiedItem);
+      setItem(newItem);
+    }
+    catch (err) {
+      setError(err);
+    }
+  }
+
+  return {
+    item,
+    saveItem,
+    loading,
+    error
+  };
+}
+
 function TodoMain() {
-  const [todos, setTodos] = React.useState(defaultTodos);
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    loading,
+    error
+  } = useLocalStorage('TODOS_V1', []);
   const completedTodos = todos.filter(todo => todo.completed).length;
   const pendingTodos = todos.filter(todo => !todo.completed).length;
 
@@ -55,17 +72,17 @@ function TodoMain() {
     const todoIndex = event.target.getAttribute('data-todo-index');
     const newTodos = [...todos];
     newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
   const clearCompleted = () => {
     const newTodos = todos.filter(todo => !todo.completed);
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
   const deleteTodo = (event) => {
     const todoIndex = event.target.getAttribute('data-todo-index');
     const newTodos = [...todos];
     newTodos.splice(todoIndex, 1);
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
   // const addTodo = (event) => {
   //   event.preventDefault();
@@ -79,7 +96,11 @@ function TodoMain() {
         <TodosLeftSpan completed={completedTodos} pending={pendingTodos} />
         {completedTodos > 0 && <ClearCompletedBtn clearCompleted={clearCompleted} />}
       </TodoMainHeader>
-      <TodoList>
+      <TodoList
+        loading={loading}
+        error={error}
+        todos={todos}
+      >
         {
           todos.map((todo, index) =>
             <TodoItem

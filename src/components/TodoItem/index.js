@@ -27,7 +27,10 @@ function TodoItem(props) {
         data-todo-index={props.todoIndex}
         onClick={props.deleteTodo}
       >
-        <img src={trashIcon} alt="trash icon" />
+        <img
+          data-todo-index={props.todoIndex}
+          src={trashIcon} alt="trash icon"
+        />
       </button>
     </li>
   )

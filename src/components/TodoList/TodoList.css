@@ -7,6 +7,11 @@
   overflow-y: scroll;
   padding-bottom: 60px;
 }
+.todo-main__todo-list .todo-main__todo-list__info{
+  padding: var(--mobile-padding);
+  color: var(--light-disabled-color);
+  text-align: center;
+}
 .todo-main__todo-list::-webkit-scrollbar {
   background-color: transparent;
 }
