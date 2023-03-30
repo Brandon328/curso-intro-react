@@ -1,4 +1,5 @@
 import React from 'react';
+import './ClearCompletedBtn.css';
 
 function ClearCompletedBtn({ clearCompleted }) {
   return (

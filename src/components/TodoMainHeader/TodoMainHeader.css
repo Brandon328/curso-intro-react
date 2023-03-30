@@ -5,15 +5,3 @@
   padding: var(--mobile-padding);
   border-bottom: 1px solid var(--light-disabled-color);
 }
-.todo-main__header span{
-  color: var(--light-disabled-color);
-  margin-right: 24px;
-}
-.todo-main__header button{
-  text-decoration: none;
-  color: var(--light-disabled-color);
-  text-align: right;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-}

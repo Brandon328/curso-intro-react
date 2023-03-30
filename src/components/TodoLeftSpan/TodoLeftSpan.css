@@ -1,0 +1,4 @@
+.todo-main__header span{
+  color: var(--light-disabled-color);
+  margin-right: 24px;
+}

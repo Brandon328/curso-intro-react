@@ -4,7 +4,7 @@ import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
 import { AddTodoBtn } from '../AddTodoBtn';
 import { TodoInput } from '../TodoInput';
-import { TodosLeftBtn } from '../TodoLeftBtn';
+import { TodosLeftSpan } from '../TodoLeftSpan';
 import { ClearCompletedBtn } from '../ClearCompletedBtn';
 import './TodoMain.css';
 
@@ -76,7 +76,7 @@ function TodoMain() {
     <main>
       <TodoInput />
       <TodoMainHeader>
-        <TodosLeftBtn completed={completedTodos} pending={pendingTodos} />
+        <TodosLeftSpan completed={completedTodos} pending={pendingTodos} />
         {completedTodos > 0 && <ClearCompletedBtn clearCompleted={clearCompleted} />}
       </TodoMainHeader>
       <TodoList>
