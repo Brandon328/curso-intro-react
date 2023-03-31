@@ -1,4 +1,18 @@
 /* TO DO INPUT */
+.todo-input{
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100vw;
+  max-width: 700px;
+  padding: var(--mobile-padding);
+  border-radius: 4px;
+  background-color: var(--dark-bg);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
 .todo-input-container::before{
   content: '';
   display: block;
@@ -9,18 +23,6 @@
   height: 100vh;
   width: 100vw;
   z-index: 5;
-}
-.todo-input{
-  position: fixed;
-  width: 100vw;
-  max-width: 700px;
-  padding: var(--mobile-padding);
-  border-radius: 4px;
-  background-color: var(--dark-bg);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 10;
 }
 .todo-input input{
   width: 100%;

@@ -42,7 +42,7 @@ body {
   main .todo-input-container{
     display: block;
     position: absolute;
-    top: -80px;
+    top: -50px;
   }
   .todo-input-container::before{
     content: none;

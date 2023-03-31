@@ -4,7 +4,16 @@ import { useLocalStorage } from './userLocalStorage';
 // Es un objeto
 const TodoContext = React.createContext();
 
+function UseModal(openModal) {
+  const modal = document.querySelector('.todo-input-container');
+  if (openModal)
+    modal.classList.remove('inactive');
+  else
+    modal.classList.add('inactive');
+}
+
 function TodoProvider(props) {
+  const [openModal, setOpenModal] = React.useState(false);
   const {
     item: todos,
     saveItem: saveTodos,
@@ -30,6 +39,15 @@ function TodoProvider(props) {
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   }
+  const addTodo = (event) => {
+    event.preventDefault();
+    console.log('hola');
+  }
+  const toggleModal = () => {
+    const open = openModal;
+    setOpenModal(!open);
+    UseModal(!open);
+  }
 
   return (
     <TodoContext.Provider value={{
@@ -41,7 +59,10 @@ function TodoProvider(props) {
       pendingTodos,
       toggleCheckTodo,
       clearCompleted,
-      deleteTodo
+      deleteTodo,
+      addTodo,
+      toggleModal,
+      openModal
     }}>
       {props.children}
     </TodoContext.Provider>

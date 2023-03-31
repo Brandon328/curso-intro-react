@@ -1,12 +1,10 @@
 import React from 'react';
+import { TodoContext } from '../TodoContext';
 import './TodoInput.css';
 import sendIcon from '../../img/send-icon.svg';
 
-const addTodo = (event) => {
-  event.preventDefault();
-}
-
 function TodoInput() {
+  const { addTodo } = React.useContext(TodoContext);
   return (
     <div className='todo-input-container inactive'>
       <form className='todo-input'>
