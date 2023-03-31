@@ -1,16 +1,20 @@
 import React from 'react';
+import { TodoContext } from '../TodoContext';
 import './TodoItem.css';
 import completedIcon from '../../img/completed-icon.svg';
 import trashIcon from '../../img/trash-icon.svg';
 
 function TodoItem(props) {
-
+  const {
+    toggleCheckTodo,
+    deleteTodo
+  } = React.useContext(TodoContext);
   return (
     <li>
       <button
         type='button'
         data-todo-index={props.todoIndex}
-        onClick={props.toggleCheckTodo}
+        onClick={toggleCheckTodo}
         className={
           props.completed
             ? 'todo-item__icon todo-item__icon--completed'
@@ -25,7 +29,7 @@ function TodoItem(props) {
       <button
         className='delete-todo-btn'
         data-todo-index={props.todoIndex}
-        onClick={props.deleteTodo}
+        onClick={deleteTodo}
       >
         <img
           data-todo-index={props.todoIndex}

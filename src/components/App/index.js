@@ -7,11 +7,11 @@ import { TodoMain } from '../TodoMain';
 function App() {
   // React solo nos permite enviar una sola etiqueta
   return (
-    // React.Fragment es una etiqueta invisible para evitar los div's innecesarios
-    <React.Fragment>
+    // <React.Fragment/> y <></> son etiquetas invisible para evitar los div's innecesarios
+    <>
       <TodoHeader />
       <TodoMain />
-    </React.Fragment>
+    </>
   );
 }
 

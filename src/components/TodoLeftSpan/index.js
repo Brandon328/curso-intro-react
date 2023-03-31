@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TodoContext } from '../TodoContext';
 import './TodoLeftSpan.css';
 
-function TodosLeftSpan({ completed, pending }) {
+function TodosLeftSpan() {
+  const { completedTodos, pendingTodos } = useContext(TodoContext);
   return (
-    <span>{pending} todos left {completed > 0 && '/ ' + completed + ' completed'}</span>
+    <span>{pendingTodos} todos left {completedTodos > 0 && '/ ' + completedTodos + ' completed'}</span>
   )
 }
 
