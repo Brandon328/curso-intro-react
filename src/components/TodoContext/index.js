@@ -39,9 +39,16 @@ function TodoProvider(props) {
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   }
-  const addTodo = (event) => {
+  const addTodo = (event, text, setTodoText) => {
     event.preventDefault();
-    console.log('hola');
+    const newTodos = [...todos];
+    newTodos.push({
+      text,
+      completed: false
+    })
+    saveTodos(newTodos);
+    setTodoText('');
+    toggleModal();
   }
   const toggleModal = () => {
     const open = openModal;
