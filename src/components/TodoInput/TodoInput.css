@@ -34,7 +34,16 @@
   vertical-align: center;
 }
 .todo-input button{
+  padding: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  color: var(--button-color);
+}
+.todo-input button svg{
+  font-size: 25px;
 }

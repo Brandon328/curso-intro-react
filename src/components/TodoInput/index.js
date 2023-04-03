@@ -1,7 +1,7 @@
 import React from 'react';
 import { TodoContext } from '../TodoContext';
 import './TodoInput.css';
-import sendIcon from '../../img/send-icon.svg';
+import { MdSend } from "react-icons/md";
 
 function TodoInput() {
   const { addTodo } = React.useContext(TodoContext);
@@ -12,9 +12,9 @@ function TodoInput() {
   return (
     <div className='todo-input-container inactive'>
       <form className='todo-input'>
-        <input type="text" placeholder="TODO" onChange={onChange} value={todoText} />
+        <input type="text" placeholder="TODO" onChange={onChange} value={todoText} required />
         <button type="submit" onClick={(event) => addTodo(event, todoText, setTodoText)}>
-          <img src={sendIcon} alt="send icon" />
+          <MdSend />
         </button>
       </form>
     </div>

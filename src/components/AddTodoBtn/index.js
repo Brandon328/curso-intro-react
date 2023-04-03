@@ -1,7 +1,6 @@
 import React from 'react';
-// import { createPortal } from 'react-dom';
+import { AiOutlinePlus } from "react-icons/ai";
 import { TodoContext } from '../TodoContext';
-// import { TodoInput } from '../TodoInput';
 import './AddTodoBtn.css';
 
 function AddTodoBtn() {
@@ -16,7 +15,7 @@ function AddTodoBtn() {
         className={openModal ? 'addtodo-btn addtodo-btn--close' : 'addtodo-btn'}
         onClick={toggleModal}
       >
-        +
+        <AiOutlinePlus />
       </button>
       {/* {openModal && createPortal(<TodoInput />, document.querySelector('main'))} */}
     </>

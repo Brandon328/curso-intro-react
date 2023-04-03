@@ -12,6 +12,15 @@ function UseModal(openModal) {
     modal.classList.add('inactive');
 }
 
+function FindTodoIndex(element) {
+  let todoIndex = element.getAttribute('data-todo-index')
+  while (!todoIndex) {
+    element = element.parentNode;
+    todoIndex = element.getAttribute('data-todo-index');
+  }
+  return todoIndex;
+}
+
 function TodoProvider(props) {
   const [openModal, setOpenModal] = React.useState(false);
   const {
@@ -24,7 +33,7 @@ function TodoProvider(props) {
   const pendingTodos = todos.filter(todo => !todo.completed).length;
 
   const toggleCheckTodo = (event) => {
-    const todoIndex = event.target.getAttribute('data-todo-index');
+    let todoIndex = FindTodoIndex(event.target);
     const newTodos = [...todos];
     newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
     saveTodos(newTodos);
@@ -34,7 +43,7 @@ function TodoProvider(props) {
     saveTodos(newTodos);
   }
   const deleteTodo = (event) => {
-    const todoIndex = event.target.getAttribute('data-todo-index');
+    const todoIndex = FindTodoIndex(event.target);
     const newTodos = [...todos];
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);

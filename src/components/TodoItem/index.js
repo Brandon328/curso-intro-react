@@ -1,8 +1,8 @@
 import React from 'react';
 import { TodoContext } from '../TodoContext';
-import './TodoItem.css';
 import completedIcon from '../../img/completed-icon.svg';
-import trashIcon from '../../img/trash-icon.svg';
+import { BsTrash3Fill, BsFillCheckCircleFill } from "react-icons/bs";
+import './TodoItem.css';
 
 function TodoItem(props) {
   const {
@@ -22,7 +22,7 @@ function TodoItem(props) {
         }
       >
         {
-          props.completed && <img src={completedIcon} alt="completed icon" data-todo-index={props.todoIndex} />
+          props.completed && <BsFillCheckCircleFill />
         }
       </button>
       <span>{props.text}</span>
@@ -31,10 +31,7 @@ function TodoItem(props) {
         data-todo-index={props.todoIndex}
         onClick={deleteTodo}
       >
-        <img
-          data-todo-index={props.todoIndex}
-          src={trashIcon} alt="trash icon"
-        />
+        <BsTrash3Fill />
       </button>
     </li>
   )
