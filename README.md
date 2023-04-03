@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# TODO App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MoonCat es una aplicación web que nos permite hacer seguimiento de nuestras tareas del día a día. Podemos agregar, completar y eliminar tareas de nuestra lista de tareas.
 
-## Available Scripts
+## Tabla de contenido
 
-In the project directory, you can run:
+- [TODO App](#todo-app)
+  - [Tabla de contenido](#tabla-de-contenido)
+  - [Screenshot de la aplicación](#screenshot-de-la-aplicación)
+    - [Links](#links)
+    - [Usage](#usage)
+  - [El proceso](#el-proceso)
+    - [Build with](#build-with)
+    - [What I learned](#what-i-learned)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
 
-### `npm start`
+## Screenshot de la aplicación
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Solución al reto](ss.jpg)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Links
 
-### `npm test`
+- [Live Site URL](https://brandon328.github.io/curso-intro-react/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Usage
 
-### `npm run build`
+1. Clona este repositorio en un entorno local.
+2. Ejecuta el comando `npm install` en la terminal dentro de la carpeta del proyecto.
+3. Ejecuta el comadno `npm start` para ejecutar la app en modo de desarrollo
+4. Abre <http://localhost:3000> para visualizarlo en el navegador.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## El proceso
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Build with
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- HTML5 semántico
+- CSS
+- Flexbox
+- CSS Grid
+- JavaScript
+- Mobile-first workflow
+- NPM - Gestor de paquetes
+- [React](https://react.dev/)
+- [Git y Github](https://github.com/) - Control de versiones
+- [TheCatAPI](https://thecatapi.com/)
 
-### `npm run eject`
+### What I learned
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Aprendí a usar la librería de javascript React y sus herramientas como el uso de componentes, React hooks (useState, useEffect, useContext).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Useful resources
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [Create React Content Loader](https://skeletonreact.com/) - Un paquete que agilizó mucho el requerimiento para generar loader skeletons components con ReactJS.
+- [react-icons](https://www.npmjs.com/package/react-icons) -  Un paquete de React muy útil para hacer uso de iconos de distintas fuentes como BoxIcons, FontAwesome, entre otros.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Author
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Website - [Brandon James Huaman](https://www.brandonjj.com)
+- Frontend Mentor - [@Brandon328](https://www.frontendmentor.io/profile/Brandon328)
+- Twitter - [@BrandonJJ328](https://www.twitter.com/BrandonJJ328)
+- Linkedin - [@BrandonJJ](https://www.linkedin.com/in/brandonjj/)
+- Github - [@Brandon328](https://github.com/Brandon328)
