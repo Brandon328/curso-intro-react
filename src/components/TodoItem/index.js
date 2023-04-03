@@ -1,6 +1,5 @@
 import React from 'react';
 import { TodoContext } from '../TodoContext';
-import completedIcon from '../../img/completed-icon.svg';
 import { BsTrash3Fill, BsFillCheckCircleFill } from "react-icons/bs";
 import './TodoItem.css';
 
