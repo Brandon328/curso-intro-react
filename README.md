@@ -1,6 +1,6 @@
 # TODO App
 
-MoonCat es una aplicación web que nos permite hacer seguimiento de nuestras tareas del día a día. Podemos agregar, completar y eliminar tareas de nuestra lista de tareas.
+TODO App es una aplicación web que nos permite hacer seguimiento de nuestras tareas del día a día. Podemos agregar, completar y eliminar tareas de nuestra lista de tareas.
 
 ## Tabla de contenido
 
