@@ -1,9 +1,6 @@
 import React from 'react';
 import { useLocalStorage } from './userLocalStorage';
 
-// Es un objeto
-const TodoContext = React.createContext();
-
 function UseModal(openModal) {
   const modal = document.querySelector('.todo-input-container');
   if (openModal)
@@ -21,7 +18,7 @@ function FindTodoIndex(element) {
   return todoIndex;
 }
 
-function TodoProvider(props) {
+function useTodos() {
   const [openModal, setOpenModal] = React.useState(false);
   const {
     item: todos,
@@ -65,24 +62,20 @@ function TodoProvider(props) {
     UseModal(!open);
   }
 
-  return (
-    <TodoContext.Provider value={{
-      todos,
-      saveTodos,
-      loading,
-      error,
-      completedTodos,
-      pendingTodos,
-      toggleCheckTodo,
-      clearCompleted,
-      deleteTodo,
-      addTodo,
-      toggleModal,
-      openModal
-    }}>
-      {props.children}
-    </TodoContext.Provider>
-  )
+  return ({
+    todos,
+    saveTodos,
+    loading,
+    error,
+    completedTodos,
+    pendingTodos,
+    toggleCheckTodo,
+    clearCompleted,
+    deleteTodo,
+    addTodo,
+    toggleModal,
+    openModal
+  })
 }
 
-export { TodoContext, TodoProvider };
+export { useTodos };

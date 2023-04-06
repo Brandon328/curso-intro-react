@@ -1,33 +1,35 @@
 import React from 'react';
-import { TodoContext } from '../TodoContext';
 import { BsTrash3Fill, BsFillCheckCircleFill } from "react-icons/bs";
 import './TodoItem.css';
 
-function TodoItem(props) {
-  const {
-    toggleCheckTodo,
-    deleteTodo
-  } = React.useContext(TodoContext);
+function TodoItem({
+  toggleCheckTodo,
+  deleteTodo,
+  todoIndex,
+  completed,
+  text
+}) {
+
   return (
     <li>
       <button
         type='button'
-        data-todo-index={props.todoIndex}
+        data-todo-index={todoIndex}
         onClick={toggleCheckTodo}
         className={
-          props.completed
+          completed
             ? 'todo-item__icon todo-item__icon--completed'
             : 'todo-item__icon todo-item__icon--todo'
         }
       >
         {
-          props.completed && <BsFillCheckCircleFill />
+          completed && <BsFillCheckCircleFill />
         }
       </button>
-      <span>{props.text}</span>
+      <span>{text}</span>
       <button
         className='delete-todo-btn'
-        data-todo-index={props.todoIndex}
+        data-todo-index={todoIndex}
         onClick={deleteTodo}
       >
         <BsTrash3Fill />

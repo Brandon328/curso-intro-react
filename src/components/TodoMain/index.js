@@ -1,13 +1,11 @@
 import React from 'react';
 import './TodoMain.css';
-import { TodoProvider } from '../TodoContext';
-import { TodoMainUI } from './TodoMainUI';
 
-function TodoMain() {
+function TodoMain({ children }) {
   return (
-    <TodoProvider>
-      <TodoMainUI />
-    </TodoProvider>
+    <main>
+      {children}
+    </main>
   )
 }
 
