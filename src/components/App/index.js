@@ -11,7 +11,7 @@ import { TodoInput } from '../TodoInput';
 import { TodosLeftSpan } from '../TodoLeftSpan';
 import { ClearCompletedBtn } from '../ClearCompletedBtn';
 import { TodoLoader } from '../TodoLoader';
-import { ChangeAlertWithStorageListener } from '../ChangeAlert';
+import { ChangeAlert } from '../ChangeAlert';
 
 // Custom hooks
 import { useTodoHeader } from './useTodoHeader';
@@ -71,7 +71,7 @@ function App() {
         />
         <AddTodoBtn toggleModal={toggleModal} openModal={openModal} />
       </TodoMain>
-      <ChangeAlertWithStorageListener synchronize={synchronizeItem} />
+      <ChangeAlert synchronize={synchronizeItem} />
     </>
   );
 }
