@@ -10,7 +10,7 @@ function AddTodoBtn({
   return (
     <button
       type='button'
-      className={openModal ? 'addtodo-btn addtodo-btn--close' : 'addtodo-btn'}
+      className={`addtodo-btn ${openModal && 'addtodo-btn--close'}`}
       onClick={toggleModal}
     >
       <AiOutlinePlus />

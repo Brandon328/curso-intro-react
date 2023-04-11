@@ -33,6 +33,10 @@
   color: var(--light-text-color);
   vertical-align: center;
 }
+.todo-input input[disabled],
+.todo-input button[disabled]{
+  opacity: .2;
+}
 .todo-input button{
   padding: 0;
   background-color: transparent;

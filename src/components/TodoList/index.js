@@ -1,20 +1,14 @@
 import React from 'react';
-import { TodoLoader } from '../TodoLoader';
 import './TodoList.css';
 
-function TodoList({
-  loading,
-  error,
-  todos,
-  children
-}) {
+function TodoList(props) {
 
   return (
     <ul className='todo-main__todo-list'>
-      {loading && <TodoLoader />}
-      {error && <p>error</p>}
-      {(!loading && todos.length == 0) && <p className='todo-main__todo-list__info'>Add your next TODO</p>}
-      {children}
+      {props.loading && props.onLoading()}
+      {props.error && props.onError()}
+      {(!props.loading && props.todos.length === 0) && props.onEmpty()}
+      {props.todos.map(props.render)}
     </ul>
   )
 }

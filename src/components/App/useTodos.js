@@ -46,15 +46,17 @@ function useTodos() {
     saveTodos(newTodos);
   }
   const addTodo = (event, text, setTodoText) => {
-    event.preventDefault();
-    const newTodos = [...todos];
-    newTodos.push({
-      text,
-      completed: false
-    })
-    saveTodos(newTodos);
-    setTodoText('');
-    toggleModal();
+    if (text !== '') {
+      event.preventDefault();
+      const newTodos = [...todos];
+      newTodos.push({
+        text,
+        completed: false
+      })
+      saveTodos(newTodos);
+      setTodoText('');
+      toggleModal();
+    }
   }
   const toggleModal = () => {
     const open = openModal;

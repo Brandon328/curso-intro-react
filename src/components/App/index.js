@@ -10,6 +10,7 @@ import { AddTodoBtn } from '../AddTodoBtn';
 import { TodoInput } from '../TodoInput';
 import { TodosLeftSpan } from '../TodoLeftSpan';
 import { ClearCompletedBtn } from '../ClearCompletedBtn';
+import { TodoLoader } from '../TodoLoader';
 
 // Custom hooks
 import { useTodoHeader } from './useTodoHeader';
@@ -43,7 +44,7 @@ function App() {
         <span>{currentDate}</span>
       </TodoHeader>
       <TodoMain>
-        <TodoInput addTodo={addTodo} />
+        <TodoInput addTodo={addTodo} loading={loading} />
         <TodoMainHeader>
           <TodosLeftSpan completedTodos={completedTodos} pendingTodos={pendingTodos} />
           {completedTodos > 0 && <ClearCompletedBtn clearCompleted={clearCompleted} />}
@@ -51,9 +52,12 @@ function App() {
         <TodoList
           loading={loading}
           error={error}
-          todos={todos}>
-          {
-            todos.map((todo, index) =>
+          todos={todos}
+          onLoading={() => <TodoLoader />}
+          onError={() => <p>error</p>}
+          onEmpty={() => <p className='todo-main__todo-list__info'>Add your next TODO</p>}
+          render={
+            (todo, index) =>
               <TodoItem
                 key={index}
                 todoIndex={index}
@@ -62,9 +66,8 @@ function App() {
                 toggleCheckTodo={toggleCheckTodo}
                 deleteTodo={deleteTodo}
               />
-            )
           }
-        </TodoList>
+        />
         <AddTodoBtn toggleModal={toggleModal} openModal={openModal} />
       </TodoMain>
     </>
