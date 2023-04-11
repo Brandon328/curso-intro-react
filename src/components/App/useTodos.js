@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocalStorage } from './userLocalStorage';
+import { useLocalStorage } from './useLocalStorage';
 
 function UseModal(openModal) {
   const modal = document.querySelector('.todo-input-container');
@@ -24,7 +24,8 @@ function useTodos() {
     item: todos,
     saveItem: saveTodos,
     loading,
-    error
+    error,
+    synchronizeItem
   } = useLocalStorage('TODOS_V1', []);
   const completedTodos = todos.filter(todo => todo.completed).length;
   const pendingTodos = todos.filter(todo => !todo.completed).length;
@@ -76,7 +77,8 @@ function useTodos() {
     deleteTodo,
     addTodo,
     toggleModal,
-    openModal
+    openModal,
+    synchronizeItem
   })
 }
 

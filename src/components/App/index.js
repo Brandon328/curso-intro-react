@@ -11,11 +11,11 @@ import { TodoInput } from '../TodoInput';
 import { TodosLeftSpan } from '../TodoLeftSpan';
 import { ClearCompletedBtn } from '../ClearCompletedBtn';
 import { TodoLoader } from '../TodoLoader';
+import { ChangeAlertWithStorageListener } from '../ChangeAlert';
 
 // Custom hooks
 import { useTodoHeader } from './useTodoHeader';
 import { useTodos } from './useTodos';
-
 
 // Componente
 function App() {
@@ -31,7 +31,8 @@ function App() {
     toggleCheckTodo,
     deleteTodo,
     toggleModal,
-    openModal
+    openModal,
+    synchronizeItem
   } = useTodos();
 
   // React solo nos permite enviar una sola etiqueta
@@ -70,6 +71,7 @@ function App() {
         />
         <AddTodoBtn toggleModal={toggleModal} openModal={openModal} />
       </TodoMain>
+      <ChangeAlertWithStorageListener synchronize={synchronizeItem} />
     </>
   );
 }
