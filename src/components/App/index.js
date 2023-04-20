@@ -20,20 +20,25 @@ import { useTodos } from './useTodos';
 // Componente
 function App() {
   const [greeting, currentDate] = useTodoHeader();
+  const { states, statesSetters } = useTodos();
+
   const {
-    completedTodos,
     todos,
-    addTodo,
-    pendingTodos,
-    clearCompleted,
     loading,
     error,
+    completedTodos,
+    pendingTodos,
+    openModal
+  } = states;
+  const {
     toggleCheckTodo,
+    clearCompleted,
     deleteTodo,
+    addTodo,
     toggleModal,
-    openModal,
     synchronizeItem
-  } = useTodos();
+  } = statesSetters
+
 
   // React solo nos permite enviar una sola etiqueta
   return (

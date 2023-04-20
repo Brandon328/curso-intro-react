@@ -65,21 +65,24 @@ function useTodos() {
     UseModal(!open);
   }
 
-  return ({
+  const states = {
     todos,
-    saveTodos,
     loading,
     error,
     completedTodos,
     pendingTodos,
+    openModal
+  }
+  const statesSetters = {
     toggleCheckTodo,
     clearCompleted,
     deleteTodo,
     addTodo,
     toggleModal,
-    openModal,
     synchronizeItem
-  })
+  }
+
+  return { states, statesSetters };
 }
 
 export { useTodos };

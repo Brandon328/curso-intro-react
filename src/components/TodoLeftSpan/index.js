@@ -3,7 +3,9 @@ import './TodoLeftSpan.css';
 
 function TodosLeftSpan({ completedTodos, pendingTodos }) {
   return (
-    <span>{pendingTodos} todos left {completedTodos > 0 && '/ ' + completedTodos + ' completed'}</span>
+    <span>
+      {pendingTodos} todos left {completedTodos > 0 && '/ ' + completedTodos + ' completed'}
+    </span>
   )
 }
 

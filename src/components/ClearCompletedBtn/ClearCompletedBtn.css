@@ -1,8 +1,9 @@
-.todo-main__header button{
+.todo-main__header button {
   text-decoration: none;
   color: var(--light-disabled-color);
   text-align: right;
   background-color: transparent;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
