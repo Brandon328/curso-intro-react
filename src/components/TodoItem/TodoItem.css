@@ -56,7 +56,12 @@
 
 .editForm {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+
+.editForm input {
+  margin: 0 10px;
   width: 100%;
 }
