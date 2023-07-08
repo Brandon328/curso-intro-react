@@ -34,6 +34,7 @@ function App() {
     toggleCheckTodo,
     clearCompleted,
     deleteTodo,
+    updateTodo,
     addTodo,
     toggleModal,
     synchronizeItem
@@ -71,6 +72,7 @@ function App() {
                 completed={todo.completed}
                 toggleCheckTodo={toggleCheckTodo}
                 deleteTodo={deleteTodo}
+                updateTodo={updateTodo}
               />
           }
         />

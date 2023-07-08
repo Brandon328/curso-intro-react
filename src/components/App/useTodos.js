@@ -46,6 +46,12 @@ function useTodos() {
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   }
+  const updateTodo = (event, newText) => {
+    const todoIndex = FindTodoIndex(event.target);
+    const newTodos = [...todos];
+    newTodos[todoIndex].text = newText;
+    saveTodos(newTodos);
+  }
   const addTodo = (event, text, setTodoText) => {
     if (text !== '') {
       event.preventDefault();
@@ -77,6 +83,7 @@ function useTodos() {
     toggleCheckTodo,
     clearCompleted,
     deleteTodo,
+    updateTodo,
     addTodo,
     toggleModal,
     synchronizeItem
