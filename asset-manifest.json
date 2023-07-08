@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/curso-intro-react/static/css/main.ed470d7a.css",
-    "main.js": "/curso-intro-react/static/js/main.611fe184.js",
+    "main.css": "/curso-intro-react/static/css/main.eaf5fefa.css",
+    "main.js": "/curso-intro-react/static/js/main.6890cdfc.js",
     "static/media/morging-bg.png": "/curso-intro-react/static/media/morging-bg.78e828a0869a90ab2851.png",
     "index.html": "/curso-intro-react/index.html",
-    "main.ed470d7a.css.map": "/curso-intro-react/static/css/main.ed470d7a.css.map",
-    "main.611fe184.js.map": "/curso-intro-react/static/js/main.611fe184.js.map"
+    "main.eaf5fefa.css.map": "/curso-intro-react/static/css/main.eaf5fefa.css.map",
+    "main.6890cdfc.js.map": "/curso-intro-react/static/js/main.6890cdfc.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed470d7a.css",
-    "static/js/main.611fe184.js"
+    "static/css/main.eaf5fefa.css",
+    "static/js/main.6890cdfc.js"
   ]
 }
